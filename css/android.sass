@@ -1,0 +1,160 @@
+#android-wrapper
+  position: absolute
+  top: -50px
+  opacity: .4
+  left: 50px
+  z-index: 1
+
+.android
+  position: relative
+  -webkit-transform:  scale(.7) rotate(3deg)
+  width: 200px
+  height: 290px
+  margin: 80px auto
+  background: $big-subtitle-colour //#A5C63B
+  border-radius: 200px 200px 50px 50px
+  -webkit-transition:  all .25s ease-out
+
+.android-active
+  -webkit-transform:  scale(1) rotate(10deg)
+  -webkit-filter: blur(3px)
+
+.android
+  &:after
+    content: ''
+    position: absolute
+    display: block
+    width: 200px
+    height: 8px
+    top: 95px
+    background:  black
+
+.android .eyes
+  &:after
+    content: ''
+    position: absolute
+    display: block
+    width: 18px
+    height: 18px
+    top: 35px
+    left: 50px
+    background:  black
+    border-radius: 15px
+.android .eyes
+  &:before
+    content: ''
+    position: absolute
+    display: block
+    width: 18px
+    height: 18px
+    top: 35px
+    left: 50px
+    background:  black
+    border-radius: 15px
+  
+
+.android .eyes
+  &:after
+    left: auto
+    right: 50px
+
+.android
+  &:hover .eyes
+    &:after
+      height: 3px
+      top: 43px
+.android
+  &:hover .eyes
+    &:before
+      height: 3px
+      top: 43px
+  
+
+.android .ants 
+  &:after
+    content: ''
+    position: absolute
+    display: block
+    width: 6px
+    height: 40px
+    top: -25px
+    left: 50px
+    background:  $big-subtitle-colour
+    border-radius: 5px
+    -webkit-transform: rotate(-25deg)
+.android .ants
+  &:before
+    content: ''
+    position: absolute
+    display: block
+    width: 6px
+    height: 40px
+    top: -25px
+    left: 50px
+    background:  $big-subtitle-colour
+    border-radius: 5px
+    -webkit-transform: rotate(-25deg)
+
+.android .ants
+  &:after
+    left: auto
+    right: 50px
+    -webkit-transform: rotate(25deg)
+
+.android .hands
+  &:after
+    content: ''
+    position: absolute
+    display: block
+    width: 44px
+    height: 150px
+    top: 96px
+    left: -52px
+    background:  $big-subtitle-colour
+    border-radius: 44px
+
+.android .hands
+  &:before
+    content: ''
+    position: absolute
+    display: block
+    width: 44px
+    height: 150px
+    top: 96px
+    left: -52px
+    background:  $big-subtitle-colour
+    border-radius: 44px
+
+.android .hands
+  &:after
+    left: auto
+    right: -52px
+
+
+.android .legs
+  &:after
+    content: ''
+    position: absolute
+    display: block
+    width: 44px
+    height: 90px
+    bottom: -70px
+    left: 40px
+    background:  $big-subtitle-colour
+    border-radius: 44px
+.android .legs
+  &:before
+    content: ''
+    position: absolute
+    display: block
+    width: 44px
+    height: 90px
+    bottom: -70px
+    left: 40px
+    background:  $big-subtitle-colour
+    border-radius: 44px
+
+.android .legs
+  &:after
+    left: auto
+    right: 40px

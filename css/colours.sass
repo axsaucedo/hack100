@@ -1,0 +1,96 @@
+// some mixins we can use
+=text-shadow($h, $v, $b, $c)
+	-moz-text-shadow: $h $v $b $c
+	-webkit-text-shadow: $h $v $b $c
+	-o-text-shadow: $h $v $b $c
+	text-shadow: $h $v $b $c
+
+=linear-gradient($from, $to, $ie: false)
+	@if $ie != 1
+		background-color: $to
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, $from), color-stop(1, $to))
+	background-image: -webkit-linear-gradient(top, $from, $to)
+	background-image: -moz-linear-gradient(top, $from, $to)
+	background-image: -ms-linear-gradient(top, $from, $to)
+	background-image: -o-linear-gradient(top, $from, $to)
+	background-image: linear-gradient(top, bottom, $from, $to)
+	@if $ie == 1
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}')
+		-ms-filter: quote(progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}'))
+
+=btn($bottom: gray, $top: white, $border: black, $highlight: blue, $lowlight: gray, $text: white, $radius: 5px)
+	:border 1px solid $border
+	:color $text
+	:border-radius $radius
+	:box-shadow inset 0 1px 0px $highlight, 0 2px 2px $lowlight
+	:text-shadow 0px -1px 0px rgba(100, 100, 100, .5)
+	:background $bottom
+	:padding 12px 24px
+	:margin 5px
+	:cursor pointer
+	:outline 0 none
+	&:hover
+		:background $top
+		:outline 0 none
+	&:active
+		:outline 0 none !important
+		:background darken($top, 5%)
+	&:focus
+		:outline thin #333333
+	&::-moz-focus-inner
+		:outline 0 none !important
+
+// make a button from a single color + optionally radius
+=buttonStyle($base-color, $radius: 5px, $slowlight: false)
+	$gray-border-color: #ababab
+	$light-gray-text-color: #777
+	$text-color: if(lightness($base-color) < 50, #ffffff, #000000)
+	$gray: if(saturation($base-color) < 10, true, false)
+	$gray-text-color: if(lightness($base-color) > 68, $light-gray-text-color, $text-color)
+	$text: if($gray, $gray-text-color, $text-color)
+	$bottom-color: desaturate(darken(adjust_hue($base-color, -7), 3%), 1%)
+	$border-color: desaturate(darken(adjust_hue($base-color, -13), 3%), 1%)
+	$border-color: if($gray, $gray-border-color, $border-color)
+	$highlight-color: lighten(desaturate($base-color, 5%), 15%)
+	$lowlight-color: if($slowlight, $slowlight, hsl(hue($base-color) - 20, 38%, 90%))
+	+btn($bottom-color, $base-color, $border-color, $highlight-color, $lowlight-color, $text, $radius)
+
+=clearfix
+	zoom: 1
+	&:before, &:after
+		content: ""
+		display: table
+	&:after
+		clear: both
+
+=column($no, $min-width: 100px)
+	:width (100%/$no)
+	:min-width $min-width
+	:float left
+	:display block
+
+
+// we should define a color scheme here
+// and never use hard-coded colours anywhere else in the styles
+//
+// if we need other colours we can use functions like darken(colour, percent) or lighten(colour, percent)
+// se more colour functions http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html
+
+$link: #99CCFF
+$link-hover: darken(#09c, 20%)
+$link-active: $link
+$link-visited: $link
+$link-focus: $link-hover
+
+$navbar-background: black
+
+$logo-red: #990000
+
+$article-bgcolor: black
+$article-side-padding: 10%
+
+$big-subtitle-colour: white
+
+$main-font: "NexaBold"
+$second-font: "Akashi"
+

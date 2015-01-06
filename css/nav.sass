@@ -1,0 +1,48 @@
+#sitenav
+	:position fixed
+	:width 100%
+	:top 0px
+	:left 0px
+	:text-align center
+	:display block
+	:background-color $navbar-background
+	:z-index 100
+
+	ul
+		:display block
+		:list-style none
+		:margin 0
+		li
+			:display inline-block
+			:padding 0
+			:margin 0
+			a
+				:display inline-block
+				:padding 10px 15px
+
+#hackasoton-nav
+	:height 1px
+	div
+		:width 150px
+		:margin-left 20px
+		:height 25px
+		:margin-top -7px
+		:background-image url(../images/hackasoton-logo.png)
+		:background-repeat no-repeat
+		:background-size contain
+
+#hacka-logo
+	:height 1px
+	div
+		:margin-left 30px
+		:width 45px
+		:height 45px
+		:margin-top -17px
+		:background-image url(../images/hackglobal-backets-logo.png)
+		:background-repeat no-repeat
+		:background-size contain
+
+#apply-button
+	+buttonStyle($logo-red, 0)
+	:float right
+	:padding 3px 10px
