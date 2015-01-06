@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,aAAa;EACX,KAAK,EAAC,IAAI;EACV,MAAM,EAAC,KAAK",
+"sources": ["location.sass"],
+"names": [],
+"file": "location.css"
+}
