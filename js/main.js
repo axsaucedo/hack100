@@ -86,6 +86,14 @@
 
 })();
 
+// APPLY FORM
+$(function() {
+    $('#typeform-full').attr("src", "https://axsauze.typeform.com/to/TWXszU");
+
+    $('#typeform-full').on('load', function() {
+        setTimeout(function() { $('#typeform-full').show() }, 1000);
+    });
+});
 
 //Smooth scrolling
 $(document).ready(function() {

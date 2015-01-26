@@ -1,21 +1,11 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
-	<title>SVC2 Hackasoton</title>
+	<title>Hack100</title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 	<link rel="stylesheet" type="text/css" href="css/styles.css" />
 	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
 
-<script>
-  // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  // })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-40497394-2', 'hackasoton.com');
-  ga('send', 'pageview');
-
-</script>
 
 <script>
       
@@ -60,29 +50,29 @@
 <body>
 	<nav id='sitenav'>
 		<div class="share">
-		  <a href="http://twitter.com/hackasoton" class="twitter">Tweet</a>
-		  <a href="http://facebook.com/hackasoton" class="facebook">Like</a>
+		  <a href="http://twitter.com/hack100" class="twitter">Tweet</a>
+		  <a href="http://facebook.com/hack100" class="facebook">Like</a>
 		</div>
 
-		<a href="https://hackasoton.typeform.com/to/V75VLA" id="apply-button"><span>Apply Now!</span></a>
+		<a href="#apply" id="apply-button"><span>Apply Now!</span></a>
 		<ul>
-			<li><a id="hacka-logo" href="http://hackaglobal.com"><div></div></a></li>
-			<li><a id="hackasoton-nav" href="#"><div></div></a></li
-			><li><a href="#event">Event</a></li
-			><li><a href="#prizes">Prizes</a></li
-			><li><a href="#schedule">Schedule</a></li
-			><li><a href="#judges">Judges</a></li
-			><li><a href="#mentors">Mentors</a></li
-			><li><a href="#sponsors">Sponsors</a></li
-			><li><a href="#location">Location</a></li
-			><li><a href="#organizers">Organizers</a></li>
+			<li><a href="http://hackaglobal.com"><img class="nav-logo" src="images/hackaglobal-logo-all-white.png"/></a></li>
+			<li><a href="http://nacue.com"><img class="nav-logo" src="images/nacue-logo-white.png"/></a></li>
+			<li><a href="#event">Hackathon</a></li>
+			<li><a href="#prizes">Prizes</a></li>
+			<li><a href="#schedule">Schedule</a></li>
+			<!-- <li><a href="#judges">Judges</a></li>
+			<li><a href="#mentors">Mentors</a></li>
+			<li><a href="#sponsors">Sponsors</a></li> 
+			<li><a href="#location">Location</a></li> -->
+			<li><a href="#organizers">Organizers</a></li>
 		</ul>
 	</nav>
 
 	<div id="hackasoton">
-	<div id="player-wrapper">
-		<div id="player"></div>
-	</div>
+		<div id="player-wrapper">
+			<div id="player"></div>
+		</div>
 		<div id="hackasoton-content" style="text-align: center;">
 			<span id="hackasoton-home-title">
 				<span id="soton-font">Hack { 100 }</span>
@@ -94,9 +84,9 @@
 			</span>
 			<div id="hackasoton-home-slogan">
 				The best developers in Europe 
-				<br>&nbsp;&nbsp;&nbsp;&nbsp;coming together to hack up startups!
+				<br>&nbsp;&nbsp;&nbsp;&nbsp;coming together to revolutionize the world!
 			</div>
-			<a href="https://hackasoton.typeform.com/to/V75VLA" id="hackasoton-home-button">
+			<a href="#apply" id="hackasoton-home-button">
 				Apply Now
 			</a>
 		</div>	
@@ -117,9 +107,12 @@
 			<h1>
 				The Hackathon
 			</h1>
-			<iframe id="svc2uk-video" width="560" height="315" src="https://www.youtube.com/embed/tpDnOaOZ6w8?html5=1" frameborder="0" allowfullscreen></iframe>
+			<iframe id="svc2uk-video" width="560" height="315" src="https://www.youtube.com/embed/MJVJGQMomTM?html5=1" frameborder="0" allowfullscreen></iframe>
 			<p>
-				The Hack100 is an initiative to bring together the top coders from all around Europe to build innovative products and revolutionize the world!
+				The Hack100 is an initiative to bring together the top coders from all around Europe to build innovative products and revolutionize the world.
+			</p>
+			<p>
+				An amazing venue, incredible speakers, cutting edge technology, and great mentors are few of the things that you will be expecting at the annual Hack100!
 			</p>
 
 		</div>
@@ -400,7 +393,7 @@
 	</article>
 
 
-	<article id="location">
+	<!-- <article id="location">
 		<div class="wrapper">
 			<h1>Location</h1>
 
@@ -416,7 +409,7 @@
 			<div id="location_map"></div>
 
 		</div>
-	</article>
+	</article> -->
 
 	<article id="organizers">
 		<div class="wrapper">
@@ -443,6 +436,15 @@
 			</div>
 		</div>
 	</article>
+
+	<article id="apply" class="content-section text-center" style="padding-bottom: 0px">
+        <div id="type-form-parent" class="row">
+            <h1>APPLY NOW</h1>
+            <div class="col-md-6 col-md-offset-3" style="background: black; padding: 10px 10px 10px 10px; height: 700px">
+                <iframe id="typeform-full" width="100%" height="100%" frameborder="0" src="" style="display:none;"></iframe>
+            </div>
+        </div>
+    </article>
 
 	<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
 	<script type="text/javascript" src='js/main.js'></script>
