@@ -43,9 +43,18 @@
 		:background-size contain
 
 #apply-button
-	+buttonStyle($logo-red, 0)
 	:float right
-	:padding 3px 10px
+
+	@extend .flashing-text
+
+	-webkit-text-stroke-width: .5px !important
+	color: blue !important
+
+	margin: auto auto
+	font-size: 20px
+	padding: 5px 5px 5px 5px
+	background: white
+	border-radius: 15px
 
 .nav-logo 
 	:height 30px
