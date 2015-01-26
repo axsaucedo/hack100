@@ -793,6 +793,16 @@ a {
   a:focus {
     color: #004d66; }
 
+#player-wrapper {
+  position: fixed;
+  z-index: -99;
+  background: black; }
+
+#player {
+  position: fixed;
+  z-index: -99;
+  display: none; }
+
 article {
   position: relative;
   z-index: 10;

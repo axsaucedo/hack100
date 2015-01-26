@@ -18,6 +18,7 @@
 </script>
 
 <script>
+      
       var tag = document.createElement('script');
       tag.src = "http://www.youtube.com/player_api";
       var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -38,6 +39,7 @@
 				'showsearch' : 0,
                 'enablejsapi' : 1,
 				'start': 6, 
+				'vq': 'hd1080',
 				'playlist': '5TnetIftOkg'
 			},
 			videoId: '5TnetIftOkg',
@@ -48,7 +50,9 @@
       }
 
       function onPlayerReady(event) {
-        // event.target.mute();
+	  $("#player").show();
+	  event.target.mute();
+  		$("#player").css("min-width", window.screen.width);
       }
 </script>
 
@@ -76,7 +80,9 @@
 	</nav>
 
 	<div id="hackasoton">
-	<div id="player" style="position: fixed; z-index: -99; min-width: 100%; min-height: 100%;"></div>
+	<div id="player-wrapper">
+		<div id="player"></div>
+	</div>
 		<div id="hackasoton-content" style="text-align: center;">
 			<span id="hackasoton-home-title">
 				Hacka <span id="soton-font">{ 100 }</span>
